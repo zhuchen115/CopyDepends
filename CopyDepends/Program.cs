@@ -41,7 +41,7 @@ namespace CopyDepends
             //Console.WriteLine("-v --verbose \t Show copy dlls");
             Console.WriteLine("-i --input \t The input execution");
             Console.WriteLine("-h --help \t Show this help");
-            Console.WriteLine("-f --overwite \t Force overwrite the target file");
+            Console.WriteLine("-f --overwrite \t Force overwrite the target file");
         }
 
         static void CopyDll(string inputpe, List<string> searchdir, string target ="", bool overwrite = false)
@@ -62,7 +62,7 @@ namespace CopyDepends
                     if(findresult.Item2.Count()>0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("The following dependendencies cannot be found");
+                        Console.WriteLine("The following dependencies cannot be found");
                     }
                     foreach (string dllmiss in findresult.Item2)
                     {
